@@ -1,0 +1,37 @@
+/* styles.css */
+.movie-details-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-details-container h2 {
+    color: #333;
+  }
+  
+  .movie-details-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .movie-details-container li {
+    margin-bottom: 10px;
+  }
+  
+  .action-buttons {
+    margin-top: 20px;
+  }
+  
+  .action-buttons a {
+    margin-right: 10px;
+  }
+
+  .card-body img {
+    max-height: 200px;
+    width: auto;
+  }
+  

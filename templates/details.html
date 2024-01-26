@@ -1,0 +1,33 @@
+{% extends 'navbar.html' %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+    <title>Movie Details</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Movie Details</h2>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Movie ID:</strong> {{ movie.id }}</li>
+              <li class="list-group-item"><strong>Movie Name:</strong> {{ movie.name }}</li>
+              <li class="list-group-item"><strong>Movie Description:</strong> {{ movie.dis }}</li>
+              <li class="list-group-item"><strong>Year:</strong> {{ movie.yr }}</li>
+              <li class="list-group-item"><strong>Image:</strong> <img src="{{ movie.img.url }}" alt="{{ movie.name }}" class="img-fluid" style="max-height: 200px; width: auto;"></li>
+            </ul>
+            <div class="mt-3">
+              <a href="{% url 'movieapp:update' movie.id %}" class="btn btn-primary">Update</a>
+              <a href="{% url 'movieapp:delete' movie.id %}" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
+{% endblock %}
